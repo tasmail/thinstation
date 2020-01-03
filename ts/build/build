@@ -1646,7 +1646,7 @@ filesystem_fixups()
 	if [ -e ./tmp-tree/pip2.freeze ]; then
 		echo -e "Installing Python2 Packages"
 		mkdir ./py-tmp
-		pip2 install -r ./tmp-tree/pip2.freeze -I --root ./py-tmp --prefix=/usr
+		pip2 install -r /build/tmp-tree/pip2.freeze -I --root /build/py-tmp  --no-warn-script-location
 		cp -a ./py-tmp/usr/* ./tmp-tree/.
 		rm -rf ./py-tmp
 		rm ./tmp-tree/pip2.freeze
@@ -1654,7 +1654,7 @@ filesystem_fixups()
 	if [ -e ./tmp-tree/pip3.freeze ]; then
 		echo -e "Installing Python3 Packages"
 		mkdir py-tmp
-		pip3 install -r ./tmp-tree/pip3.freeze -I --root ./py-tmp --prefix=/usr --no-warn-script-location
+		pip3 install -r /build/tmp-tree/pip3.freeze -I --root /build/py-tmp --no-warn-script-location
 		cp -a ./py-tmp/usr/* ./tmp-tree/.
 		rm -rf ./py-tmp
 		rm ./tmp-tree/pip3.freeze
