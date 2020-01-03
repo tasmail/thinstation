@@ -5,7 +5,7 @@
 
 [Service]
     User=octoprint
-    ExecStart=/bin/python -m octoprint
+    ExecStart=/bin/python3 -m octoprint
 
 [Install]
     WantedBy=multi-user.target
