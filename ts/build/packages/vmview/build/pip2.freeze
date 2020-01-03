@@ -1,0 +1,5 @@
+scons
+netaddr 
+pyxdg 
+sqlalchemy 
+urllib3

@@ -1,6 +1,4 @@
 base
-pycups
-pycurl
 pygobject
 dbus-python
 ghostscript

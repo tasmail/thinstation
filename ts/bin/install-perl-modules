@@ -1,0 +1,8 @@
+#cpan App::cpanminus
+if [ ! -e /root/.cpan ]; then
+	mkdir -p /downloads/cpan
+	ln -sf /downloads/cpan /root/.cpan
+fi
+for perl in `cat /ts/etc/perl.list`; do 
+	perl -MCPAN -e "CPAN::Shell->notest('install', '$perl')"
+done
